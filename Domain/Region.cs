@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain;
 
 public class Region{
 
+    [Key]
     public string IdRegion {get;set;}
     public string NameRegion {get;set;}
     public string IdCountryFk {get;set;}

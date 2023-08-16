@@ -1,7 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain;
 
 public class Person
 {
+
+    [Key]
     public string IdPerson {get;set;}
     public string NamePerson {get;set;}
     public int IdGenderFk {get;set;}

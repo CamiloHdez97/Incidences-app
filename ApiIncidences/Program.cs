@@ -1,3 +1,4 @@
+using ApiIncidences.Extensions;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
@@ -10,6 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureCors();
 
 //Inject DB Context
 builder.Services.AddDbContext<ApiIncidencesContext>(Options =>
@@ -31,6 +33,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

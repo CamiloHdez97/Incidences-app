@@ -1,7 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain;
 
 public class City {
 
+    [Key]
     public string IdCity {get;set;}
     public string NameCity {get;set;}
     public string IdRegFk {get;set;}

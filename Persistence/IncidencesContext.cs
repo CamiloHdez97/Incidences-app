@@ -8,7 +8,7 @@ namespace Persistence
         }
         public DbSet<City> Cities {get;set;}
         public DbSet<Person> Persons {get;set;}
-        public DbSet<Lounge> lounges {get;set;}
+        public DbSet<Lounge> Lounges {get;set;}
         public DbSet<Tuition> Tuitions {get;set;}
         public DbSet<TypePerson> TypePersons {get;set;}
         public DbSet<TrainerLounge> TrainerLounges {get;set;}

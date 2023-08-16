@@ -1,0 +1,17 @@
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/aplication.deps.json
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/aplication.dll
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/aplication.pdb
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/Domain.dll
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/Persistence.dll
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/Domain.pdb
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/bin/Debug/net7.0/Persistence.pdb
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.csproj.AssemblyReference.cache
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.GeneratedMSBuildEditorConfig.editorconfig
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.AssemblyInfoInputs.cache
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.AssemblyInfo.cs
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.csproj.CoreCompileInputs.cache
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.csproj.CopyComplete
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.dll
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/refint/aplication.dll
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/aplication.pdb
+/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/Debug/net7.0/ref/aplication.dll
