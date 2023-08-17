@@ -2,10 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain;
 
-public class Person
+public class Person : BaseEntity
 {
-
-    [Key]
     public string IdPerson {get;set;}
     public string NamePerson {get;set;}
     public int IdGenderFk {get;set;}

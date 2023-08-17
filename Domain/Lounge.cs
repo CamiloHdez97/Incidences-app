@@ -2,9 +2,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain;
 
-public class Lounge{
+public class Lounge : BaseEntity
+{
 
-    [Key]
     public int IdLounge {get;set;}
     public string NameLounge {get;set;}
     public int Capacity {get;set;}
