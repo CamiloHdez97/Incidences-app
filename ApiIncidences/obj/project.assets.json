@@ -1798,7 +1798,7 @@
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
-      "aplication/1.0.0": {
+      "Aplication/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
@@ -1806,10 +1806,10 @@
           "Persistence": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/aplication.dll": {}
+          "bin/placeholder/Aplication.dll": {}
         },
         "runtime": {
-          "bin/placeholder/aplication.dll": {}
+          "bin/placeholder/Aplication.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -5854,10 +5854,10 @@
         "system.xml.xmldocument.nuspec"
       ]
     },
-    "aplication/1.0.0": {
+    "Aplication/1.0.0": {
       "type": "project",
-      "path": "../aplication/aplication.csproj",
-      "msbuildProject": "../aplication/aplication.csproj"
+      "path": "../Aplication/Aplication.csproj",
+      "msbuildProject": "../Aplication/Aplication.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -5872,12 +5872,12 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Domain >= 1.0.0",
+      "Aplication >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 7.0.9",
       "Microsoft.AspNetCore.OpenApi >= 7.0.8",
+      "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.10",
-      "Swashbuckle.AspNetCore >= 6.5.0",
-      "aplication >= 1.0.0"
+      "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
@@ -5905,11 +5905,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
-              "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj"
-            },
-            "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj": {
-              "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj"
+            "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj": {
+              "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj"
             }
           }
         }
@@ -5931,6 +5928,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.8, )"
+          },
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[7.0.10, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",

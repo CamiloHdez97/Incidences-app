@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiIncidences", "ApiIncidences\ApiIncidences.csproj", "{2A2F5C46-2B26-4B9C-A4AE-6DD629005A19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aplication", "Aplication\aplication.csproj", "{A3022C4C-7F09-4FF7-AB6C-F7A3CEB113AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aplication", "Aplication\Aplication.csproj", "{A3022C4C-7F09-4FF7-AB6C-F7A3CEB113AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

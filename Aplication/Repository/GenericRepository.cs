@@ -1,20 +1,20 @@
 using System;
-using System.Collection.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Domain;
 using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using Persistencia;
+using Persistence;
 
 namespace Aplication.Repository;
 
 public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
 
-    private readonly ApiIncidenciasContext _context;
+    private readonly ApiIncidencesContext _context;
 
-    public GenericRepository(ApiIncidenciasContext contex){
+    public GenericRepository(ApiIncidencesContext contex){
         _context = contex;
     }
 
@@ -28,7 +28,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
         _context.Set<T>().AddRange(entities);
     }
 
-    public virtual IEnumerable<T> Find(Expressions<Func<T, bool>> expression)
+    public virtual IEnumerable<T> Find(Expression<Func<T, bool>> expression)
     {
         return _context.Set<T>().Where(expression);
     }
@@ -38,7 +38,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
         return await _context.Set<T>().ToListAsync();
     }
 
-    public virtual async Tasks<T> GetByIdAsync(int id)
+    public virtual async Task<T> GetByIdAsync(int id)
     {
         return await _context.Set<T>().FindAsync(id);
     }
