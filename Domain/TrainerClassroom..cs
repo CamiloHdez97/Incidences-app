@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Domain;
 
-public class TrainerLounge : BaseEntity
+public class TrainerClassroom : BaseEntity
 {
     public string IdPerTrainerFk {get;set;}
     public Person Person {get;set;}
-    public int IdLoungeFk {get;set;}
-    public Lounge Lounge {get;set;}
+    public int IdClassroomFk {get;set;}
+    public Classroom Classroom {get;set;}
 
 }
