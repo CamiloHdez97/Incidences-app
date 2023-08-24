@@ -2,13 +2,13 @@ namespace Domain.Interfaces;
 
 public interface IUnitOfWork{
 
-    ICityRepository Country {get;}
-    IClassroomRepository Classroom {get;}
-    IGenderRepository Gender {get;}
-    IPersonRepository Person {get;}
-    IRegionRepository Region {get;}
-    ITrainerClassroomRepository TrainerClassroom {get;}
-    ITuitionRepository Tuition {get;}
-    ITyperPersonRepository TyperPerson {get;}
+    ICityRepository Countries {get;}
+    IClassroomRepository Classrooms {get;}
+    IGenderRepository Genders {get;}
+    IPersonRepository Persons {get;}
+    IRegionRepository Regions {get;}
+    ITrainerClassroomRepository TrainerClassrooms {get;}
+    ITuitionRepository Tuitions {get;}
+    ITyperPersonRepository TyperPersons {get;}
 
 }
