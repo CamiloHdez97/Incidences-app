@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "aplication/1.0.0": {
+      "Aplication/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
           "Persistence": "1.0.0"
         },
         "runtime": {
-          "aplication.dll": {}
+          "Aplication.dll": {}
         }
       },
       "FluentValidation/11.5.1": {
@@ -825,7 +825,7 @@
     }
   },
   "libraries": {
-    "aplication/1.0.0": {
+    "Aplication/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

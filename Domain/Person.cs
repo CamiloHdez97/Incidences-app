@@ -11,9 +11,8 @@ public class Person : BaseEntity
     public int IdCityFk {get;set;}
     public City City {get;set;}
     public int IdTypePerFk {get;set;}
-
     public TypePerson TypePerson {get;set;}
     public ICollection<Tuition> Tuitions {get;set;}
-    public ICollection<TrainerLounge> TrainerLounges {get;set;}
+    public ICollection<TrainerClassroom> TrainerClassrooms {get;set;}
 
 }

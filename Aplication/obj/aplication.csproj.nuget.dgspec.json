@@ -1,9 +1,69 @@
 {
   "format": 1,
   "restore": {
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj": {}
+    "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj": {}
   },
   "projects": {
+    "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj",
+        "projectName": "Aplication",
+        "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj",
+        "packagesPath": "/home/apolM01-042/.nuget/packages/",
+        "outputPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/apolM01-042/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
+                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj"
+              },
+              "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj": {
+                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -114,66 +174,6 @@
               "version": "[7.0.0, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.110/RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj",
-        "projectName": "aplication",
-        "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/aplication.csproj",
-        "packagesPath": "/home/apolM01-042/.nuget/packages/",
-        "outputPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/aplication/obj/",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "/home/apolM01-042/.nuget/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "net7.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net7.0": {
-            "targetAlias": "net7.0",
-            "projectReferences": {
-              "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
-                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj"
-              },
-              "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj": {
-                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
           "imports": [
             "net461",
             "net462",
