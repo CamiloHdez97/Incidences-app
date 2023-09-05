@@ -1,5 +1,5 @@
 namespace Domain.Interfaces{
     
-    public interface ITyperPersonRepository : IGenericRepository<TypePerson>{}
+    public interface ITypePersonRepository : IGenericRepository<TypePerson>{}
 
 }

@@ -144,3 +144,6 @@ C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\ApiIncidences\
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\ApiIncidences\obj\Debug\net7.0\ApiIncidences.csproj.CopyComplete
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\ApiIncidences\obj\Debug\net7.0\ApiIncidences.genruntimeconfig.cache
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\ApiIncidences\obj\Debug\net7.0\ref\ApiIncidences.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\ApiIncidences\obj\Debug\net7.0\ApiIncidences.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\ApiIncidences\obj\Debug\net7.0\refint\ApiIncidences.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\ApiIncidences\obj\Debug\net7.0\ApiIncidences.pdb

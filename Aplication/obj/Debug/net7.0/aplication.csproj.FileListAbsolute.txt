@@ -32,3 +32,11 @@ C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\obj
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.csproj.CoreCompileInputs.cache
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.csproj.CopyComplete
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\obj\Debug\net7.0\ref\Aplication.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.csproj.AssemblyReference.cache
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.AssemblyInfoInputs.cache
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.AssemblyInfo.cs
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.csproj.CoreCompileInputs.cache
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\refint\Aplication.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.pdb
