@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj": {}
+    "/home/skylab-112/Incidences-app/Aplication/Aplication.csproj": {}
   },
   "projects": {
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj": {
+    "/home/skylab-112/Incidences-app/Aplication/Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj",
+        "projectUniqueName": "/home/skylab-112/Incidences-app/Aplication/Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/Aplication.csproj",
-        "packagesPath": "/home/apolM01-042/.nuget/packages/",
-        "outputPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/obj/",
+        "projectPath": "/home/skylab-112/Incidences-app/Aplication/Aplication.csproj",
+        "packagesPath": "/home/skylab-112/.nuget/packages/",
+        "outputPath": "/home/skylab-112/Incidences-app/Aplication/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/apolM01-042/.nuget/NuGet/NuGet.Config"
+          "/home/skylab-112/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,11 +26,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
-                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj"
+              "/home/skylab-112/Incidences-app/Domain/Domain.csproj": {
+                "projectPath": "/home/skylab-112/Incidences-app/Domain/Domain.csproj"
               },
-              "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj": {
-                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj"
+              "/home/skylab-112/Incidences-app/Persistence/Persistence.csproj": {
+                "projectPath": "/home/skylab-112/Incidences-app/Persistence/Persistence.csproj"
               }
             }
           }
@@ -44,6 +44,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -64,17 +70,17 @@
         }
       }
     },
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
+    "/home/skylab-112/Incidences-app/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj",
+        "projectUniqueName": "/home/skylab-112/Incidences-app/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj",
-        "packagesPath": "/home/apolM01-042/.nuget/packages/",
-        "outputPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/obj/",
+        "projectPath": "/home/skylab-112/Incidences-app/Domain/Domain.csproj",
+        "packagesPath": "/home/skylab-112/.nuget/packages/",
+        "outputPath": "/home/skylab-112/Incidences-app/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/apolM01-042/.nuget/NuGet/NuGet.Config"
+          "/home/skylab-112/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -102,6 +108,10 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "itext7.pdfhtml": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -127,17 +137,17 @@
         }
       }
     },
-    "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj": {
+    "/home/skylab-112/Incidences-app/Persistence/Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj",
+        "projectUniqueName": "/home/skylab-112/Incidences-app/Persistence/Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/Persistence.csproj",
-        "packagesPath": "/home/apolM01-042/.nuget/packages/",
-        "outputPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Persistence/obj/",
+        "projectPath": "/home/skylab-112/Incidences-app/Persistence/Persistence.csproj",
+        "packagesPath": "/home/skylab-112/.nuget/packages/",
+        "outputPath": "/home/skylab-112/Incidences-app/Persistence/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/apolM01-042/.nuget/NuGet/NuGet.Config"
+          "/home/skylab-112/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -149,8 +159,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj": {
-                "projectPath": "/home/apolM01-042/Documents/NetCore/Incidences-app/Domain/Domain.csproj"
+              "/home/skylab-112/Incidences-app/Domain/Domain.csproj": {
+                "projectPath": "/home/skylab-112/Incidences-app/Domain/Domain.csproj"
               }
             }
           }
@@ -167,7 +177,7 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.9, )"
+              "version": "[7.0.10, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

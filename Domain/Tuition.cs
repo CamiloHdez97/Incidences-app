@@ -10,6 +10,6 @@ public class Tuition : BaseEntity
     public int IdTeam {get;set;}
     public Team Team {get;set;}
     public int IdClassroomFk {get;set;}
-    public Classroom Classroom {get;set;}
+    public Place Place {get;set;}
 
 }

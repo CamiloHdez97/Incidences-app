@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain;
 
-public class ContactType : BaseEntity
+public class TypeContact : BaseEntity
 {
     public string Name_Contact { get; set; }
      public ICollection<Contact> Contacts  { get; set; }

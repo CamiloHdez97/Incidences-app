@@ -15,3 +15,6 @@
 /home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/obj/Debug/net7.0/refint/Aplication.dll
 /home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/obj/Debug/net7.0/Aplication.pdb
 /home/apolM01-042/Documents/NetCore/Incidences-app/Aplication/obj/Debug/net7.0/ref/Aplication.dll
+/home/skylab-112/Incidences-app/Aplication/obj/Debug/net7.0/Aplication.dll
+/home/skylab-112/Incidences-app/Aplication/obj/Debug/net7.0/refint/Aplication.dll
+/home/skylab-112/Incidences-app/Aplication/obj/Debug/net7.0/Aplication.pdb
