@@ -17,6 +17,7 @@ namespace Aplication.UnitOfWork;
         private TrainerClassroomRepository _TrainerClassroom;
         private TuitionRepository _Tuition;
         private TypePersonRepository _TypePerson;
+        private UserRepository _User;
         
 
         public UnitOfWork(ApiIncidencesContext context)
@@ -131,6 +132,18 @@ namespace Aplication.UnitOfWork;
             }
         }
 
+        public IUserRepository Users
+        {
+            get
+            {
+                if (_User is not null)
+                {
+                    return _User;
+                }
+                return _User = new UserRepository(_context);
+            }
+        }
+
         public void Dispose(){
             _context.Dispose();
         }
@@ -138,5 +151,6 @@ namespace Aplication.UnitOfWork;
         public async Task<int> SaveAsync(){
             return await _context.SaveChangesAsync();
         }
+
 
 }

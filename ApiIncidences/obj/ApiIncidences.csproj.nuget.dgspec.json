@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj": {}
+    "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj": {}
   },
   "projects": {
-    "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj": {
+    "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj",
+        "projectUniqueName": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj",
         "projectName": "ApiIncidences",
-        "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj",
-        "packagesPath": "C:\\Users\\APM01-042\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\ApiIncidences\\obj\\",
+        "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\ApiIncidences\\ApiIncidences.csproj",
+        "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\ApiIncidences\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM01-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\Aplication.csproj": {
-                "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\Aplication.csproj"
+              "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\Aplication.csproj": {
+                "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\Aplication.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -88,21 +92,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\Aplication.csproj": {
+    "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\Aplication.csproj",
-        "packagesPath": "C:\\Users\\APM01-042\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Aplication\\obj\\",
+        "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\Aplication.csproj",
+        "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM01-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -114,11 +118,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj"
+              "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\Persistence.csproj": {
-                "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\Persistence.csproj"
+              "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\Persistence.csproj": {
+                "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -132,6 +136,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -148,21 +158,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj": {
+    "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\APM01-042\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\obj\\",
+        "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM01-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -190,6 +200,10 @@
               "target": "Package",
               "version": "[11.3.0, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
             "itext7.pdfhtml": {
               "target": "Package",
               "version": "[5.0.1, )"
@@ -211,21 +225,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\Persistence.csproj": {
+    "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\Persistence.csproj",
-        "packagesPath": "C:\\Users\\APM01-042\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Persistence\\obj\\",
+        "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM01-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -237,8 +251,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj"
+              "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj"
               }
             }
           }
@@ -278,7 +292,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

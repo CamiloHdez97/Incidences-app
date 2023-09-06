@@ -1,11 +1,13 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
-namespace Persistence
-{
+namespace Persistence;
+
     public class ApiIncidencesContext : DbContext
     {
         public ApiIncidencesContext(DbContextOptions<ApiIncidencesContext> options) : base(options){
         }
+
+        public DbSet<User> Users { get; set; }
         public DbSet<City> Cities {get;set;}
         public DbSet<Person> Persons {get;set;}
         public DbSet<Classroom> Classrooms {get;set;}
@@ -16,6 +18,12 @@ namespace Persistence
         public DbSet<Country> Countries {get;set;}
         public DbSet<Gender> Genders {get;set;}
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
+
     }
 
-}
