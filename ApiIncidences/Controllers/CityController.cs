@@ -1,9 +1,7 @@
 using AutoMapper;
 using Domain;
 using Domain.Interfaces;
-using Persistence;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace ApiIncidences.Controllers;
 

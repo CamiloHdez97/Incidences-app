@@ -4,8 +4,6 @@ namespace Domain;
 
 public class Place : BaseEntity
 {
-
-    public int IdPlace {get;set;}
     public string NamePlace {get;set;}
     public int Capacity {get;set;}
     public int IdArea {get; set;}

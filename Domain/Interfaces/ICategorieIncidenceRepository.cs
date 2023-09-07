@@ -1,5 +1,5 @@
 namespace Domain.Interfaces{
-    public interface ICategorieIncidenceRepository : IGenericRepository<CategorieIncidence>{
+    public interface ICategoryIncidenceRepository : IGenericRepository<CategoryIncidence>{
 
     }
 }

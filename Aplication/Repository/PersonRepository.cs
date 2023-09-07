@@ -3,7 +3,7 @@ using Domain;
 using Domain.Interfaces;
 using Persistence;
 
-namespace APlication.Repository;
+namespace Aplication.Repository;
 
 public class PersonRepository : GenericRepository<Person>, IPersonRepository{
 

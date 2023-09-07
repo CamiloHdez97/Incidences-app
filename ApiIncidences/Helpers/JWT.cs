@@ -1,4 +1,4 @@
-namespace InsidenceAPI.Helpers;
+namespace ApiIncidences.Helpers;
 
     public class JWT
     {

@@ -1,4 +1,4 @@
-namespace IncidenceAPI.Helpers;
+namespace ApiIncidences.Helpers;
 
 public class Params
 {

@@ -13,8 +13,8 @@ public class Incidence : BaseEntity
     public int IdPriority { get; set;}
     public Priority Priority {get; set;}
     public DateTime Date { get; set; }
-    public string CategorieIncidence { get; set; }
-    public ICollection<CategorieIncidence> CategorieIncidences { get; set; }
+    public int IdCategoryIncidence { get; set; }
+    public CategoryIncidence CategoryIncidence { get; set; }
     public string Description {get; set;}
     
 

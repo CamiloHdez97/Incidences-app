@@ -4,7 +4,7 @@ namespace Domain;
 
 public class TypeContact : BaseEntity
 {
-    public string Name_Contact { get; set; }
+    public string NameContact { get; set; }
      public ICollection<Contact> Contacts  { get; set; }
     public string Description { get; set; }
 }

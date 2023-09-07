@@ -1,5 +1,8 @@
 namespace Domain.Interfaces{
     
-    public interface IIncidenceRepository : IGenericRepository<Incidence>{}
+    public interface IIncidenceRepository : IGenericRepository<Incidence>
+    {
+
+    }
 
 }

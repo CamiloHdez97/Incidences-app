@@ -1,6 +1,5 @@
-namespace Domain.Interfaces;
+namespace Domain.Interfaces{
+    
+    public interface IUserRolRepository : IGenericRepository<UserRol>{}
 
-    public interface IUserRolRepository : IGenericRepository<UserRol>
-    {
-  
-    }
+}

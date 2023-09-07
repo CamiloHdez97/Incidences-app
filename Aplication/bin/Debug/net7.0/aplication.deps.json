@@ -806,6 +806,7 @@
       "Domain/1.0.0": {
         "dependencies": {
           "FluentValidation.AspNetCore": "11.3.0",
+          "Microsoft.EntityFrameworkCore": "7.0.10",
           "itext7.pdfhtml": "5.0.1"
         },
         "runtime": {

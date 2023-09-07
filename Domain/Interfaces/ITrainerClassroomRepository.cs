@@ -1,5 +1,8 @@
 namespace Domain.Interfaces{
 
-    public interface ITrainerClassroomRepository : IGenericRepository<TrainerClassroom>{}
+    public interface ITrainerClassroomRepository : IGenericRepository<TrainerClassroom>
+    {
+        
+    }
 
 }

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain;
 
-public class DocumentType : BaseEntity
+public class TypeDocument : BaseEntity
 {
     
     public string NameDocumentType { get; set; }

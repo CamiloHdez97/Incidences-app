@@ -1,14 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Domain;
 using Domain.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using Persistence;
+using Microsoft.EntityFrameworkCore;
 
 
-namespace Aplicacion.Repository;
+namespace Aplication.Repository;
 public class UserRepository : GenericRepository<User>, IUserRepository
 {
     private readonly ApiIncidencesContext _context;
@@ -18,6 +14,6 @@ public class UserRepository : GenericRepository<User>, IUserRepository
     }
     public async Task<User> GetByUserNameAsync (string userName)
     {
-        return await _context.Users.Include(u => u.Rols).FirstOrDefaultAsync (u => u.Name_User.ToLower()==userName.ToLower());
+        return await _context.Users.Include(u => u.Rols).FirstOrDefaultAsync (u => u.NameUser.ToLower()==userName.ToLower());
     }
 }

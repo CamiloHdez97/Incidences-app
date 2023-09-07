@@ -1,13 +1,14 @@
-namespace InsidenceAPI.Helpers;
+namespace ApiIncidences.Helpers;
 
     public class Autorizacion
     {
         public enum Rols
         {
-            Administrador,
+            Admin,
             Gerente,
-            Empleado,
+            Administrativo,
+            Trainer,
             Camper
         }
-        public const Rols Rol_PorDefecto = Rols.Empleado;
+        public const Rols RolDefault = Rols.Administrativo;
     }

@@ -4,17 +4,17 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Domain;
-using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Domain.Interfaces;
 using Persistence;
 
 namespace Aplication.Repository;
-
-public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
-
+public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
+{
     private readonly ApiIncidencesContext _context;
 
-    public GenericRepository(ApiIncidencesContext contex){
+    public GenericRepository(ApiIncidencesContext contex)
+    {
         _context = contex;
     }
 
@@ -40,7 +40,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
 
     public virtual async Task<T> GetByIdAsync(int id)
     {
-        return await _context.Set<T>().FindAsync(id);
+        return (await _context.Set<T>().FindAsync(id))!;
     }
 
     public Task<T> GetByIdAsync(string id)
@@ -48,7 +48,7 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
         throw new NotImplementedException();
     }
 
-    public virtual void Remove(T entity)
+    public virtual void Remove (T entity)
     {
         _context.Set<T>().Remove(entity);
     }
@@ -60,7 +60,15 @@ public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity {
 
     public virtual void Update(T entity)
     {
-        _context.Set<T>().Update(entity);
+        _context.Set<T>()
+            .Update(entity);
+    }  public virtual async Task<(int totalRegistros, IEnumerable<T> registros)> GetAllAsync(int pageIndex, int pageSize, string _search)
+    {
+        var totalRegistros = await _context.Set<T>().CountAsync();
+        var registros = await _context.Set<T>()
+            .Skip((pageIndex - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
+        return (totalRegistros, registros);
     }
-    
 }

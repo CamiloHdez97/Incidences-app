@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 
-namespace InsidenceAPI.Helpers
+namespace ApiIncidences.Helpers
 {
    public class GlobalVerbRoleHandler : AuthorizationHandler<GlobalVerbRoleRequirement>
 {

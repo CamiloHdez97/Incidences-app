@@ -1,6 +1,6 @@
 using Domain;
 
-namespace Aplicacion.Contratos;
+namespace Aplication.Contratos;
 
 public interface IJwtGenerator
 {
