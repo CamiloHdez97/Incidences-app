@@ -88,8 +88,8 @@ namespace API.Controllers;
         {
             return BadRequest();
         }
-        rolDto.Id = rol.Id.ToString();
-        return CreatedAtAction(nameof(Post),new {id= rolDto.Id}, rolDto);
+        rolDto.IdRol = rol.Id;
+        return CreatedAtAction(nameof(Post),new {id= rolDto.IdRol}, rolDto);
     }
 
      [HttpPut("{id}")]

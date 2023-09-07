@@ -40,3 +40,12 @@ C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7
 C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.dll
 C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\refint\Aplication.dll
 C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.pdb
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Aplication.deps.json
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Aplication.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Aplication.pdb
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Domain.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Persistence.dll
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Domain.pdb
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Persistence.pdb
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.csproj.CopyComplete
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\ref\Aplication.dll

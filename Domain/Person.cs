@@ -14,8 +14,10 @@ public class Person : BaseEntity
     public City City {get;set;}
     public int IdTypePer {get;set;}
     public TypePerson TypePerson {get;set;}
+    public ICollection<Incidence> Incidences { get; set; }
     public ICollection<Contact> Contacts { get; set; }
     public ICollection<Tuition> Tuitions {get;set;}
     public ICollection<TrainerClassroom> TrainerClassrooms {get;set;}
+    public ICollection<Address> Addresses { get; set; }
 
 }

@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Persistence.Data.Configuration{
@@ -8,17 +9,50 @@ namespace Persistence.Data.Configuration{
 
         public void Configure(EntityTypeBuilder<Person> builder){
 
-            builder.ToTable("person");
-            builder.HasKey(e => e.Id);
-            builder.Property(e => e.Id).HasMaxLength(20);
+  builder.ToTable("Person");
 
-            builder.Property(p => p.NamePerson).IsRequired().HasMaxLength(50);
 
-            builder.HasOne(p => p.Gender).WithMany(p => p.Persons).HasForeignKey(p => p.IdGender);
+        builder.Property(p => p.Id)
+        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
+        .HasColumnName("id_user")
+        .HasColumnType("int")
+        .IsRequired();
 
-            builder.HasOne(p => p.City).WithMany(p => p.Persons).HasForeignKey(p => p.IdCity);
+        builder.Property(p => p.IdDocumentType)
+        .HasColumnName("document_type")
+        .HasColumnType("int")
+        .IsRequired();
 
-            builder.HasOne(p => p.TypePerson).WithMany(p => p.Persons).HasForeignKey(p => p.IdTypePer);
+        builder.Property(p => p.NamePerson)
+        .HasColumnName("name")
+        .HasColumnType("varchar")
+        .HasMaxLength(150)
+        .IsRequired();
+
+        builder.Property(p => p.LastNamePerson)
+        .HasColumnName("lastname")
+        .HasColumnType("varchar")
+        .HasMaxLength(150)
+        .IsRequired();
+
+
+        builder.Property(p => p.IdGender)
+       .HasColumnName("id_gender")
+       .HasColumnType("varchar")
+       .HasMaxLength(150)
+       .IsRequired();
+
+
+        builder.HasOne(u => u.City)
+        .WithMany(a => a.Persons)
+        .HasForeignKey(u => u.IdCity)
+        .IsRequired();
+
+        
+        builder.HasOne(u => u.TypePerson)
+        .WithMany(a => a.Persons)
+        .HasForeignKey(u => u.IdTypePer)
+        .IsRequired();
 
 
         }

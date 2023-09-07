@@ -17,5 +17,5 @@ public class GenderConfiguration : IEntityTypeConfiguration<Gender>
 
     }
 
-}
+    }
 }

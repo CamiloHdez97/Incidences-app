@@ -1,9 +1,9 @@
-using Dominio;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistencia.Configuration;
+namespace Persistence.Configuration;
 public class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
@@ -18,7 +18,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
         .IsRequired();
 
 
-        builder.Property(p => p.Name_User)
+        builder.Property(p => p.NameUser)
         .HasColumnName("NameUser")
         .HasColumnType("varchar")
         .HasMaxLength(150)

@@ -13,6 +13,8 @@ namespace ApiIncidences.Profiles;
         CreateMap<Person, PersonDto>().ReverseMap();
         CreateMap<Incidence, IncidenceDto>().ReverseMap();
 
+        //Herencia
+        
         // CreateMap<Person, PersonxIncidenceDto>().ReverseMap();
         // CreateMap<Region, RegionxCityDto>().ReverseMap();
         // CreateMap<Country, CountryXRegDto>().ReverseMap();

@@ -15,6 +15,20 @@ namespace Persistence.Data.Configuration{
             builder.HasKey(e => e.Id);
             builder.Property(e => e.Id);
 
+            builder.HasOne(y => y.Person)
+            .WithMany(l => l.Tuitions)
+            .HasForeignKey(z => z.IdPerson)
+            .IsRequired();
+
+            builder.HasOne(y => y.Team)
+            .WithMany(l => l.Tuitions)
+            .HasForeignKey(z => z.IdPerson)
+            .IsRequired();
+
+            builder.HasOne(y => y.Place)
+            .WithMany(l => l.Tuitions)
+            .HasForeignKey(z => z.IdPerson)
+            .IsRequired();
         }
 
     }
