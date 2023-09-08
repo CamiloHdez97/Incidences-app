@@ -31,15 +31,15 @@ namespace API.Controllers;
     }
 
 
-    [HttpGet]
-    [MapToApiVersion("1.1")]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<RegionxCityDto>>> Get11()
-    {
-        var Con = await  _unitofwork.Regions.GetAllAsync();
-        return _mapper.Map<List<RegionxCityDto>>(Con);
-    }
+    // [HttpGet]
+    // [MapToApiVersion("1.1")]
+    // [ProducesResponseType(StatusCodes.Status200OK)]
+    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    // public async Task<ActionResult<IEnumerable<RegionxCityDto>>> Get11()
+    // {
+    //     var Con = await  _unitofwork.Regions.GetAllAsync();
+    //     return _mapper.Map<List<RegionxCityDto>>(Con);
+    // }
 
      [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -53,20 +53,20 @@ namespace API.Controllers;
 
 
 
-    [HttpPost]
-    [ProducesResponseType(StatusCodes.Status201Created)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<Region>> Post(RegionDto regionDto){
-        var region = _mapper.Map<Country>(regionDto);
-        this._unitofwork.Countries.Add(region);
-        await _unitofwork.SaveAsync();
-        if(region == null)
-        {
-            return BadRequest();
-        }
-        regionDto.Id = region.Id.ToString();
-        return CreatedAtAction(nameof(Post),new {id= regionDto.Id}, regionDto);
-    }
+    // [HttpPost]
+    // [ProducesResponseType(StatusCodes.Status201Created)]
+    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    // public async Task<ActionResult<Region>> Post(RegionDto regionDto){
+    //     var region = _mapper.Map<Country>(regionDto);
+    //     this._unitofwork.Countries.Add(region);
+    //     await _unitofwork.SaveAsync();
+    //     if(region == null)
+    //     {
+    //         return BadRequest();
+    //     }
+    //     regionDto.Id = region.Id.ToString();
+    //     return CreatedAtAction(nameof(Post),new {id= regionDto.Id}, regionDto);
+    // }
     
    
     [HttpPut("{id}")]

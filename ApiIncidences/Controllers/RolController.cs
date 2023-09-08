@@ -6,10 +6,11 @@ using ApiIncidences.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using ApiIncidences.Helpers;
 
-namespace API.Controllers;
+namespace ApiIncidences.Controllers;
 
-[ApiVersion("1.0")]
-[ApiVersion("1.1")]
+
+//[ApiVersion("1.0")]
+//[ApiVersion("1.1")]
  public class RolController : BaseApiController
 {
 
@@ -22,7 +23,8 @@ namespace API.Controllers;
         _mapper = mapper;
     }
 
-  /*   [HttpGet]
+
+    [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<IEnumerable<Rol>>> Get()
@@ -30,16 +32,16 @@ namespace API.Controllers;
         var Con = await  _unitofwork.Rols.GetAllAsync();
         return Ok(Con);
     }
- */
 
-    [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<RolDto>>> Get()
-    {
-        var Con = await  _unitofwork.Rols.GetAllAsync();
-        return _mapper.Map<List<RolDto>>(Con);
-    }
+ 
+    // [HttpGet]
+    // [ProducesResponseType(StatusCodes.Status200OK)]
+    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    // public async Task<ActionResult<IEnumerable<RolDto>>> Get()
+    // {
+    //     var Con = await  _unitofwork.Rols.GetAllAsync();
+    //     return _mapper.Map<List<RolDto>>(Con);
+    // }
 
     [HttpGet]
     [MapToApiVersion("1.1")]

@@ -1,11 +1,10 @@
-using System.Xml;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiIncidences.Controllers;
-
 [ApiController]
-[Route("api/incidences/[controller]")]
-
-public class BaseApiController : ControllerBase{
-    
+[Route("api/insidences/[controller]")]
+public class BaseApiController : ControllerBase {
 }

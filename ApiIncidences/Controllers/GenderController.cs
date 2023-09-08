@@ -3,7 +3,7 @@ using Domain.Interfaces;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace ApiIncidences.Controllers;
 
  public class GenderController : BaseApiController
 {

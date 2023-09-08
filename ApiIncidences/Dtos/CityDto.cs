@@ -7,6 +7,6 @@ public class CityDto
     public int Id { get; set; }
     public string IdCity {get;set;}
     public string NameCity {get;set;}
-    public string IdReg {get;set;}
+    public string IdRegion {get;set;}
 
 }

@@ -5,7 +5,7 @@ using Persistence;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace API.Controllers;
+namespace ApiIncidences.Controllers;
 
  public class TypeDocumentController : BaseApiController
 {

@@ -5,7 +5,7 @@ using Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace API.Controllers;
+namespace ApiIncidences.Controllers;
 
  public class PlaceController : BaseApiController
 {

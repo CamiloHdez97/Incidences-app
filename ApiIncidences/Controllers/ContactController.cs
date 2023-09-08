@@ -3,7 +3,7 @@ using Domain;
 using Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API.Controllers;
+namespace ApiIncidences.Controllers;
 
  public class ContactController : BaseApiController
 {
