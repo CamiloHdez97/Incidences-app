@@ -3,28 +3,28 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistencia.Configuration;
+namespace Persistence.Configuration;
     public class AddressConfiguration : IEntityTypeConfiguration<Address>
     {
     public void Configure(EntityTypeBuilder<Address> builder)
     {
-        builder.ToTable("addresses");
+        builder.ToTable("address");
 
             builder.Property(p => p.Id)
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-                .HasColumnName("Id_Address")
+                .HasColumnName("id_address")
                 .HasColumnType("int")
                 .IsRequired();
 
             builder.Property(p => p.Neigborhood)
-                .HasColumnName("Nameneigborhood")
+                .HasColumnName("name_neigborhood")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
 
                 
             builder.Property(p => p.TypeWay)
-                .HasColumnName("TypeWay")
+                .HasColumnName("type_way")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
@@ -32,25 +32,25 @@ namespace Persistencia.Configuration;
      
             builder.Property(p => p.NumberWay)
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-                .HasColumnName("NumberWay")
+                .HasColumnName("number_way")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
 
                   builder.Property(p => p.QuadrantPrefix)
-                .HasColumnName("QuadranPrefix")
+                .HasColumnName("quadran_prefix")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
 
                   builder.Property(p => p.NumberVenereableWay)
-                .HasColumnName("NameVenereableWay")
+                .HasColumnName("name_venereableWay")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
 
                   builder.Property(p => p.NumberPlate)
-                .HasColumnName("NumberPlate")
+                .HasColumnName("number_plate")
                 .HasColumnType("varchar")
                 .HasMaxLength(200)
                 .IsRequired();
@@ -59,6 +59,10 @@ namespace Persistencia.Configuration;
                  builder.HasOne(p => p.Person)
                 .WithMany(p => p.Addresses)
                 .HasForeignKey(p => p.IdPerson);
+
+                builder.HasOne(p => p.City)
+                .WithMany(p => p.Addresses)
+                .HasForeignKey(p => p.IdCity);
 
     }
 }

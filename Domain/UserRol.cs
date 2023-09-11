@@ -1,6 +1,6 @@
 namespace Domain;
 
-    public class UserRol : BaseEntity
+    public class UserRol
     {
         public int UserId { get; set; }
         public User User{ get; set; }

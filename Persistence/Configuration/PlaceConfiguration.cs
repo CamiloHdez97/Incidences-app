@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace persistencia.Configuration;
+namespace Persistence.Configuration;
 public class PlaceConfiguration : IEntityTypeConfiguration<Place>
 {
     public void Configure(EntityTypeBuilder<Place> builder)
@@ -12,7 +12,7 @@ public class PlaceConfiguration : IEntityTypeConfiguration<Place>
 
                 builder.Property(p => p.Id)
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-                .HasColumnName("Id_Place")
+                .HasColumnName("id_place")
                 .HasColumnType("int")
                 .IsRequired();
 

@@ -1,7 +1,6 @@
 using Persistence;
 using Aplication.Repository;
 using Domain.Interfaces;
-using Persistence;
 
 namespace Aplication.UnitOfWork;
 
@@ -29,7 +28,6 @@ namespace Aplication.UnitOfWork;
     private TypeDocumentRepository _TypeDocument;
     private TypePersonRepository _TypePerson;
     private UserRepository _User;
-    private UserRolRepository _UserRol;
 
         public UnitOfWork(ApiIncidencesContext context)
         {
@@ -255,17 +253,6 @@ namespace Aplication.UnitOfWork;
                 }
                 return _TypeContact = new TypeContactRepository(_context);
             }
-        } 
-
-        public IUserRolRepository UserRols {
-            get
-            {
-                if (_UserRol is not null){
-                    return _UserRol;
-                }
-                return _UserRol = new UserRolRepository(_context);
-            }
-            
         } 
 
         public ITypeDocumentRepository TypeDocuments {

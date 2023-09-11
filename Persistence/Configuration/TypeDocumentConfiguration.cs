@@ -3,17 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistencia.Configuration;
+namespace Persistence.Configuration;
 public class TypeDocumentConfiguration : IEntityTypeConfiguration<TypeDocument>
 {
     public void Configure(EntityTypeBuilder<TypeDocument> builder)
     {
-        builder.ToTable("DocumentType");
+        builder.ToTable("type_document");
 
 
             builder.Property(p => p.Id)
             .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-            .HasColumnName("id_documentType")
+            .HasColumnName("id_documenttype")
             .HasColumnType("int")
             .IsRequired();
 
@@ -23,8 +23,6 @@ public class TypeDocumentConfiguration : IEntityTypeConfiguration<TypeDocument>
             .HasColumnType("varchar")
             .HasMaxLength(200)
             .IsRequired();       
-
-
 
             builder.Property(p => p.Abbreviation)
             .HasColumnName("abbreviation")

@@ -2,7 +2,7 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistence.Data.Configuration{
+namespace Persistence.Configuration{
 
 public class GenderConfiguration : IEntityTypeConfiguration<Gender>
 {
@@ -13,7 +13,8 @@ public class GenderConfiguration : IEntityTypeConfiguration<Gender>
         builder.HasKey(e => e.Id);
         builder.Property(e => e.Id);
 
-        builder.Property(p => p.NameGender).IsRequired().HasMaxLength(50);
+        builder.Property(p => p.NameGender).HasColumnName("name_gender")
+        .HasColumnType("varchar").IsRequired().HasMaxLength(50);
 
     }
 

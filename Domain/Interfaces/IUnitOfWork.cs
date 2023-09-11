@@ -23,6 +23,5 @@ public interface IUnitOfWork{
     ITypeDocumentRepository TypeDocuments {get;}
     ITypePersonRepository TypePersons {get;}
     IUserRepository Users {get;}
-    IUserRolRepository UserRols {get;}
     Task<int> SaveAsync();
 }

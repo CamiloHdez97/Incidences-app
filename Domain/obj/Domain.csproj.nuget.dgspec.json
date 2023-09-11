@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj": {}
+    "C:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj": {
+    "C:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\APM01-042\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\APM01-042\\Documents\\CamiloHdez\\Incidences-app\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Camilo Hernandez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Camilo Hernandez\\Documents\\Campus\\NetCore\\Incidences-app\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\APM01-042\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Camilo Hernandez\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -67,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
         }
       }
     }

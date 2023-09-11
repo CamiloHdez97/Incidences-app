@@ -56,7 +56,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
            j =>
            {
                j.HasKey(t => new { t.UserId, t.RolId });
-
            });
     }
 }

@@ -3,7 +3,7 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace Persistence.Data.Configuration{
+namespace Persistence.Configuration{
 
     public class TuitionConfiguration : IEntityTypeConfiguration<Tuition>{
 

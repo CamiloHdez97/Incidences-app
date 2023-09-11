@@ -2,12 +2,13 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
 #nullable disable
 
-namespace Persistence.Data.Migrations
+namespace Persistence.data.Migrations
 {
     [DbContext(typeof(ApiIncidencesContext))]
     partial class ApiIncidencesContextModelSnapshot : ModelSnapshot
@@ -19,264 +20,850 @@ namespace Persistence.Data.Migrations
                 .HasAnnotation("ProductVersion", "7.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("Domain.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_address")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("IdCity")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPerson")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Neigborhood")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_neigborhood");
+
+                    b.Property<string>("NumberPlate")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("number_plate");
+
+                    b.Property<string>("NumberVenereableWay")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_venereableWay");
+
+                    b.Property<string>("NumberWay")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("number_way")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("QuadrantPrefix")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("quadran_prefix");
+
+                    b.Property<string>("TypeWay")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("type_way");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdCity");
+
+                    b.HasIndex("IdPerson");
+
+                    b.ToTable("address", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Area", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_area")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("NameArea")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("descriptionarea");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("area", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.CategoryContact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_categoryContact")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("category_contact", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.CategoryIncidence", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CategoryIncidence");
+                });
+
             modelBuilder.Entity("Domain.City", b =>
                 {
-                    b.Property<string>("IdCity")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_city")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("IdRegFk")
-                        .HasColumnType("longtext");
+                    b.Property<int>("IdRegion")
+                        .HasColumnType("int");
 
                     b.Property<string>("NameCity")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_city");
 
-                    b.Property<string>("RegionIdRegion")
-                        .HasColumnType("varchar(255)");
+                    b.HasKey("Id");
 
-                    b.HasKey("IdCity");
+                    b.HasIndex("IdRegion");
 
-                    b.HasIndex("RegionIdRegion");
+                    b.ToTable("city", (string)null);
+                });
 
-                    b.ToTable("Cities");
+            modelBuilder.Entity("Domain.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_contact")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DescriptionContact")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.Property<int>("IdCategoryContact")
+                        .HasColumnType("int")
+                        .HasColumnName("category_contact");
+
+                    b.Property<int>("IdPerson")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdTypeCon")
+                        .HasColumnType("int")
+                        .HasColumnName("type_contact");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdCategoryContact");
+
+                    b.HasIndex("IdPerson");
+
+                    b.HasIndex("IdTypeCon");
+
+                    b.ToTable("contact", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Country", b =>
                 {
-                    b.Property<string>("IdCountry")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_country")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("NameCountry")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_country");
 
-                    b.HasKey("IdCountry");
+                    b.HasKey("Id");
 
-                    b.ToTable("Countries");
+                    b.ToTable("country", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Gender", b =>
                 {
-                    b.Property<int>("IdGender")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("NameGender")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_gender");
 
-                    b.HasKey("IdGender");
+                    b.HasKey("Id");
 
-                    b.ToTable("Genders");
+                    b.ToTable("gender", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.Lounge", b =>
+            modelBuilder.Entity("Domain.Incidence", b =>
                 {
-                    b.Property<int>("IdLounge")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("id_incidence")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Capacity")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("Date")
+                        .HasColumnName("date");
 
-                    b.Property<string>("NameLounge")
-                        .HasColumnType("longtext");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
 
-                    b.HasKey("IdLounge");
+                    b.Property<int>("IdCategoryIncidence")
+                        .HasColumnType("int")
+                        .HasColumnName("id_categoryincidence");
 
-                    b.ToTable("lounges");
+                    b.Property<int>("IdPerson")
+                        .HasColumnType("int")
+                        .HasColumnName("id_user");
+
+                    b.Property<int>("IdPlace")
+                        .HasColumnType("int")
+                        .HasColumnName("id_place");
+
+                    b.Property<int>("IdPriority")
+                        .HasColumnType("int")
+                        .HasColumnName("id_priority");
+
+                    b.Property<int>("IdState")
+                        .HasColumnType("int")
+                        .HasColumnName("id_state");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdCategoryIncidence");
+
+                    b.HasIndex("IdPerson");
+
+                    b.HasIndex("IdPlace");
+
+                    b.HasIndex("IdPriority");
+
+                    b.HasIndex("IdState");
+
+                    b.ToTable("incidence", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Person", b =>
                 {
-                    b.Property<string>("IdPerson")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_person")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CityIdCity")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<int?>("GenderIdGender")
+                    b.Property<int>("IdCity")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdCityFk")
+                    b.Property<int>("IdDocumentType")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdGenderFk")
+                    b.Property<int>("IdGender")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdTypePerFk")
+                    b.Property<int>("IdTypePer")
                         .HasColumnType("int");
+
+                    b.Property<string>("LastNamePerson")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar")
+                        .HasColumnName("lastname");
 
                     b.Property<string>("NamePerson")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name");
 
-                    b.Property<int?>("TypePersonIdTypePerson")
+                    b.Property<int?>("TypeDocumentId")
                         .HasColumnType("int");
 
-                    b.HasKey("IdPerson");
+                    b.HasKey("Id");
 
-                    b.HasIndex("CityIdCity");
+                    b.HasIndex("IdCity");
 
-                    b.HasIndex("GenderIdGender");
+                    b.HasIndex("IdGender");
 
-                    b.HasIndex("TypePersonIdTypePerson");
+                    b.HasIndex("IdTypePer");
 
-                    b.ToTable("Persons");
+                    b.HasIndex("TypeDocumentId");
+
+                    b.ToTable("person", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Place", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_place")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Capacity")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("capacity");
+
+                    b.Property<int>("IdArea")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NamePlace")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_place");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IdArea");
+
+                    b.ToTable("place", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Priority", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("priority", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Region", b =>
                 {
-                    b.Property<string>("IdRegion")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_region")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("CountryIdCountry")
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("IdCountryFk")
-                        .HasColumnType("longtext");
+                    b.Property<int>("IdCountry")
+                        .HasColumnType("int");
 
                     b.Property<string>("NameRegion")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_region");
 
-                    b.HasKey("IdRegion");
+                    b.HasKey("Id");
 
-                    b.HasIndex("CountryIdCountry");
+                    b.HasIndex("IdCountry");
 
-                    b.ToTable("Regions");
+                    b.ToTable("region", (string)null);
                 });
 
-            modelBuilder.Entity("Domain.TrainerLounge", b =>
+            modelBuilder.Entity("Domain.Rol", b =>
                 {
-                    b.Property<string>("IdPerTrainerFk")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_rol")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("IdLoungeFk")
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.Property<string>("NameRol")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_rol");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Rol", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.State", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_state")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("state", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.Team", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(3)
                         .HasColumnType("int");
 
-                    b.Property<int?>("LoungeIdLounge")
+                    b.Property<string>("NameTeam")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_team");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("team", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.TrainerClassroom", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("PersonIdPerson")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("IdClassroom")
+                        .HasColumnType("int")
+                        .HasColumnName("id_classroom");
 
-                    b.HasKey("IdPerTrainerFk");
+                    b.Property<int>("IdPerTrainer")
+                        .HasMaxLength(20)
+                        .HasColumnType("int")
+                        .HasColumnName("id_trainer");
 
-                    b.HasIndex("LoungeIdLounge");
+                    b.HasKey("Id");
 
-                    b.HasIndex("PersonIdPerson");
+                    b.HasIndex("IdClassroom");
 
-                    b.ToTable("TrainerLounges");
+                    b.HasIndex("IdPerTrainer");
+
+                    b.ToTable("trainer_classroom", (string)null);
                 });
 
             modelBuilder.Entity("Domain.Tuition", b =>
                 {
-                    b.Property<int>("IdTuition")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("IdLoungeFk")
+                    b.Property<int>("IdClassroom")
                         .HasColumnType("int");
 
-                    b.Property<string>("IdPersonFk")
-                        .HasColumnType("longtext");
-
-                    b.Property<int?>("LoungeIdLounge")
+                    b.Property<int>("IdPerson")
                         .HasColumnType("int");
 
-                    b.Property<string>("PersonIdPerson")
-                        .HasColumnType("varchar(255)");
+                    b.Property<int>("IdTeam")
+                        .HasColumnType("int");
 
-                    b.HasKey("IdTuition");
+                    b.HasKey("Id");
 
-                    b.HasIndex("LoungeIdLounge");
+                    b.HasIndex("IdPerson");
 
-                    b.HasIndex("PersonIdPerson");
+                    b.ToTable("tuition", (string)null);
+                });
 
-                    b.ToTable("Tuitions");
+            modelBuilder.Entity("Domain.TypeContact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_contacttype")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.Property<string>("NameContact")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("name_contact");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("type_contact", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.TypeDocument", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("id_documenttype")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Abbreviation")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar")
+                        .HasColumnName("abbreviation");
+
+                    b.Property<string>("NameDocumentType")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("type_document", (string)null);
                 });
 
             modelBuilder.Entity("Domain.TypePerson", b =>
                 {
-                    b.Property<int>("IdTypePerson")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     b.Property<string>("DescriptionTypePerson")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar")
+                        .HasColumnName("description");
 
-                    b.HasKey("IdTypePerson");
+                    b.HasKey("Id");
 
-                    b.ToTable("TypePersons");
+                    b.ToTable("type_person", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasColumnName("IdUser")
+                        .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar")
+                        .HasColumnName("Email");
+
+                    b.Property<string>("NameUser")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar")
+                        .HasColumnName("NameUser");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("varchar")
+                        .HasColumnName("Password");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User", (string)null);
+                });
+
+            modelBuilder.Entity("Domain.UserRol", b =>
+                {
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RolId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.HasKey("UserId", "RolId");
+
+                    b.HasIndex("RolId");
+
+                    b.ToTable("UserRol");
+                });
+
+            modelBuilder.Entity("Domain.Address", b =>
+                {
+                    b.HasOne("Domain.City", "City")
+                        .WithMany("Addresses")
+                        .HasForeignKey("IdCity")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Person", "Person")
+                        .WithMany("Addresses")
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("City");
+
+                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("Domain.City", b =>
                 {
                     b.HasOne("Domain.Region", "Region")
                         .WithMany("Cities")
-                        .HasForeignKey("RegionIdRegion");
+                        .HasForeignKey("IdRegion")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Region");
+                });
+
+            modelBuilder.Entity("Domain.Contact", b =>
+                {
+                    b.HasOne("Domain.CategoryContact", "CategoryContact")
+                        .WithMany("Contacts")
+                        .HasForeignKey("IdCategoryContact")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Person", "Person")
+                        .WithMany("Contacts")
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.TypeContact", "TypeContact")
+                        .WithMany("Contacts")
+                        .HasForeignKey("IdTypeCon")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CategoryContact");
+
+                    b.Navigation("Person");
+
+                    b.Navigation("TypeContact");
+                });
+
+            modelBuilder.Entity("Domain.Incidence", b =>
+                {
+                    b.HasOne("Domain.CategoryIncidence", "CategoryIncidence")
+                        .WithMany("Incidences")
+                        .HasForeignKey("IdCategoryIncidence")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Person", "Person")
+                        .WithMany("Incidences")
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Place", "Place")
+                        .WithMany("Incidences")
+                        .HasForeignKey("IdPlace")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Priority", "Priority")
+                        .WithMany("Incidences")
+                        .HasForeignKey("IdPriority")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.State", "State")
+                        .WithMany("Incidences")
+                        .HasForeignKey("IdState")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CategoryIncidence");
+
+                    b.Navigation("Person");
+
+                    b.Navigation("Place");
+
+                    b.Navigation("Priority");
+
+                    b.Navigation("State");
                 });
 
             modelBuilder.Entity("Domain.Person", b =>
                 {
                     b.HasOne("Domain.City", "City")
                         .WithMany("Persons")
-                        .HasForeignKey("CityIdCity");
+                        .HasForeignKey("IdCity")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Gender", "Gender")
                         .WithMany("Persons")
-                        .HasForeignKey("GenderIdGender");
+                        .HasForeignKey("IdGender")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.TypePerson", "TypePerson")
                         .WithMany("Persons")
-                        .HasForeignKey("TypePersonIdTypePerson");
+                        .HasForeignKey("IdTypePer")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.TypeDocument", "TypeDocument")
+                        .WithMany("Persons")
+                        .HasForeignKey("TypeDocumentId");
 
                     b.Navigation("City");
 
                     b.Navigation("Gender");
 
+                    b.Navigation("TypeDocument");
+
                     b.Navigation("TypePerson");
+                });
+
+            modelBuilder.Entity("Domain.Place", b =>
+                {
+                    b.HasOne("Domain.Area", "Area")
+                        .WithMany("Places")
+                        .HasForeignKey("IdArea")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Area");
                 });
 
             modelBuilder.Entity("Domain.Region", b =>
                 {
                     b.HasOne("Domain.Country", "Country")
                         .WithMany("Regions")
-                        .HasForeignKey("CountryIdCountry");
+                        .HasForeignKey("IdCountry")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("Domain.TrainerLounge", b =>
+            modelBuilder.Entity("Domain.TrainerClassroom", b =>
                 {
-                    b.HasOne("Domain.Lounge", "Lounge")
-                        .WithMany("TrainerLounges")
-                        .HasForeignKey("LoungeIdLounge");
+                    b.HasOne("Domain.Place", "Place")
+                        .WithMany("TrainerClassrooms")
+                        .HasForeignKey("IdClassroom")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Domain.Person", "Person")
-                        .WithMany("TrainerLounges")
-                        .HasForeignKey("PersonIdPerson");
-
-                    b.Navigation("Lounge");
+                        .WithMany("TrainerClassrooms")
+                        .HasForeignKey("IdPerTrainer")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Person");
+
+                    b.Navigation("Place");
                 });
 
             modelBuilder.Entity("Domain.Tuition", b =>
                 {
-                    b.HasOne("Domain.Lounge", "Lounge")
-                        .WithMany("Tuitions")
-                        .HasForeignKey("LoungeIdLounge");
-
                     b.HasOne("Domain.Person", "Person")
                         .WithMany("Tuitions")
-                        .HasForeignKey("PersonIdPerson");
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("Lounge");
+                    b.HasOne("Domain.Place", "Place")
+                        .WithMany("Tuitions")
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.Team", "Team")
+                        .WithMany("Tuitions")
+                        .HasForeignKey("IdPerson")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Person");
+
+                    b.Navigation("Place");
+
+                    b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("Domain.UserRol", b =>
+                {
+                    b.HasOne("Domain.Rol", "Rol")
+                        .WithMany("UserRols")
+                        .HasForeignKey("RolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Domain.User", "User")
+                        .WithMany("UserRols")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Rol");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Domain.Area", b =>
+                {
+                    b.Navigation("Places");
+                });
+
+            modelBuilder.Entity("Domain.CategoryContact", b =>
+                {
+                    b.Navigation("Contacts");
+                });
+
+            modelBuilder.Entity("Domain.CategoryIncidence", b =>
+                {
+                    b.Navigation("Incidences");
                 });
 
             modelBuilder.Entity("Domain.City", b =>
                 {
+                    b.Navigation("Addresses");
+
                     b.Navigation("Persons");
                 });
 
@@ -290,18 +877,31 @@ namespace Persistence.Data.Migrations
                     b.Navigation("Persons");
                 });
 
-            modelBuilder.Entity("Domain.Lounge", b =>
+            modelBuilder.Entity("Domain.Person", b =>
                 {
-                    b.Navigation("TrainerLounges");
+                    b.Navigation("Addresses");
+
+                    b.Navigation("Contacts");
+
+                    b.Navigation("Incidences");
+
+                    b.Navigation("TrainerClassrooms");
 
                     b.Navigation("Tuitions");
                 });
 
-            modelBuilder.Entity("Domain.Person", b =>
+            modelBuilder.Entity("Domain.Place", b =>
                 {
-                    b.Navigation("TrainerLounges");
+                    b.Navigation("Incidences");
+
+                    b.Navigation("TrainerClassrooms");
 
                     b.Navigation("Tuitions");
+                });
+
+            modelBuilder.Entity("Domain.Priority", b =>
+                {
+                    b.Navigation("Incidences");
                 });
 
             modelBuilder.Entity("Domain.Region", b =>
@@ -309,9 +909,39 @@ namespace Persistence.Data.Migrations
                     b.Navigation("Cities");
                 });
 
+            modelBuilder.Entity("Domain.Rol", b =>
+                {
+                    b.Navigation("UserRols");
+                });
+
+            modelBuilder.Entity("Domain.State", b =>
+                {
+                    b.Navigation("Incidences");
+                });
+
+            modelBuilder.Entity("Domain.Team", b =>
+                {
+                    b.Navigation("Tuitions");
+                });
+
+            modelBuilder.Entity("Domain.TypeContact", b =>
+                {
+                    b.Navigation("Contacts");
+                });
+
+            modelBuilder.Entity("Domain.TypeDocument", b =>
+                {
+                    b.Navigation("Persons");
+                });
+
             modelBuilder.Entity("Domain.TypePerson", b =>
                 {
                     b.Navigation("Persons");
+                });
+
+            modelBuilder.Entity("Domain.User", b =>
+                {
+                    b.Navigation("UserRols");
                 });
 #pragma warning restore 612, 618
         }

@@ -8,7 +8,7 @@ public class TypeContactConfiguration : IEntityTypeConfiguration<TypeContact>
 {
     public void Configure(EntityTypeBuilder<TypeContact> builder)
     {
-        builder.ToTable("ContactType");
+        builder.ToTable("type_contact");
 
                 builder.Property(p => p.Id)
                 .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)

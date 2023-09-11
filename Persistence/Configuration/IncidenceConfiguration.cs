@@ -3,16 +3,16 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace persistencia.Configuration;
+namespace Persistence.Configuration;
 public class IncidenceConfiguration : IEntityTypeConfiguration<Incidence>
 {
     public void Configure(EntityTypeBuilder<Incidence> builder)
     {
-        builder.ToTable("Incidence");
+        builder.ToTable("incidence");
 
             builder.Property(p => p.Id)
             .HasAnnotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn)
-            .HasColumnName("Id_Incidence")
+            .HasColumnName("id_incidence")
             .HasColumnType("int")
             .IsRequired();
 
@@ -42,12 +42,12 @@ public class IncidenceConfiguration : IEntityTypeConfiguration<Incidence>
             .IsRequired();
 
             builder.Property(p => p.IdCategoryIncidence)
-            .HasColumnName("IdCategoryIncidence")
+            .HasColumnName("id_categoryincidence")
             .HasColumnType("int")
             .IsRequired();
 
             builder.Property(p => p.Description)
-            .HasColumnName("Description")
+            .HasColumnName("description")
             .HasColumnType("varchar")
             .HasMaxLength(50)
             .IsRequired();

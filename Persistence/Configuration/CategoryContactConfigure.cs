@@ -16,12 +16,7 @@ public class CategoryContactConfiguration : IEntityTypeConfiguration<CategoryCon
             .HasColumnType("int")
             .IsRequired();
 
-            builder.Property(p => p.IdCategory)
-            .HasColumnName("id_category")
-            .HasColumnType("int")
-            .IsRequired();
-
-            builder.Property(p => p.NameCategoryContact)
+            builder.Property(p => p.Description)
             .HasColumnName("description")
             .HasColumnType("varchar")
             .HasMaxLength(200)
