@@ -17,7 +17,7 @@ namespace Persistence.Configuration{
                 .IsRequired();
 
             builder.Property(p => p.NameCountry).HasColumnName("name_country")
-        .HasColumnType("varchar").IsRequired().HasMaxLength(50);
+            .HasColumnType("varchar").IsRequired().HasMaxLength(50);
         }
     }
 

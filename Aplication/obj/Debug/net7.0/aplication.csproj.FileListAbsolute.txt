@@ -51,3 +51,5 @@ C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7
 C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\ref\Aplication.dll
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\bin\Debug\net7.0\Aplication.runtimeconfig.json
 C:\Users\Camilo Hernandez\Documents\Campus\NetCore\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.genruntimeconfig.cache
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\bin\Debug\net7.0\Aplication.runtimeconfig.json
+C:\Users\APM01-042\Documents\CamiloHdez\Incidences-app\Aplication\obj\Debug\net7.0\Aplication.genruntimeconfig.cache
